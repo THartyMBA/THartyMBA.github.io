@@ -21,6 +21,10 @@
 
 .nav-link {
   color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .jumbotron {
@@ -37,10 +41,12 @@
 
 .jumbotron h1 {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .jumbotron p {
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .section {
@@ -49,11 +55,13 @@
 
 .section h2 {
   font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .section p {
   font-size: 1.25rem;
   line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .project {
@@ -75,6 +83,7 @@
 
 .footer p {
   font-size: 1rem;
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -88,5 +97,17 @@
 
   .jumbotron p {
     font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section p {
+    font-size: 1.2rem;
   }
 }
