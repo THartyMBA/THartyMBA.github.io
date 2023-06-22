@@ -121,6 +121,12 @@ a {
   margin-bottom: 2rem;
 }
 
+.portfolio-section h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
 .portfolio-section .portfolio-item {
   margin-bottom: 2rem;
 }
@@ -129,6 +135,7 @@ a {
   max-width: 100%;
   height: auto;
 }
+
 
 /* Contact section styles */
 .contact-section {
