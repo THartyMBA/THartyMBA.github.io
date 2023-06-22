@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #007bff;
   text-decoration: none;
-  background-color: transparent;
 }
 
 /* Navbar styles */
@@ -31,9 +30,11 @@ a {
 }
 
 .nav-link {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-right: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Header styles */
@@ -154,68 +155,36 @@ a {
 
 .contact-section form button[type="submit"] {
   background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
 
-  /* styles.css */
+.contact-section form button[type="submit"]:hover {
+  background-color: #0069d9;
+}
 
-  /* Add custom styles here */
+/* Footer styles */
+footer {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
 
-  /* Center the content */
-  .container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-  }
+.footer-links {
+  margin-bottom: 1rem;
+}
 
-  /* Style the heading */
-  h1 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
 
-  /* Style the subheading */
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  /* Style the image */
-  img {
-    border-radius: 50%;
-    max-width: 300px;
-    height: auto;
-  }
-
-  /* Style the navigation links */
-  .nav-link {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  /* Bootstrap */
-
-  /* Set the container width */
-  .container {
-    max-width: 960px;
-  }
-
-  /* Style the primary button */
-  .btn-primary {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #007bff;
-    border: none;
-  }
-
-  /* Style the secondary button */
-  .btn-secondary {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: #6c757d;
-    border: none;
-  }
