@@ -30,6 +30,9 @@
 	<script>
 		var aiBot = new AiBot({embedId: 'FXXQf8gm3YMY', remoteBaseUrl: 'https://humanchat.net/', version: '1.4.8'});
 	</script>
+
+	<!-- Bootstrap carousel link -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 	<!-- Header -->
@@ -114,60 +117,50 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2 class="section-title">Portfolio</h2>
-				<p class="section-description">Here you can find examples of my work and projects I've completed.</p>
-				<div class="portfolio-items">
-					<div class="portfolio-item">
-						<h3 class="portfolio-title">YouTube Channel</h3>
-						<p class="portfolio-description">Description of your YouTube channel goes here.</p>
-						<div class="youtube-carousel">
+				<h2>Portfolio</h2>
+				<p>Here you can find examples of my work and projects I've completed.</p>
+				<!-- Include your portfolio items here -->
+
+				<div id="portfolio-carousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ul class="carousel-indicators">
+						<li data-target="#portfolio-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#portfolio-carousel" data-slide-to="1"></li>
+						<li data-target="#portfolio-carousel" data-slide-to="2"></li>
+					</ul>
+
+					<!-- Slides -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
 							<!-- YouTube video 1 -->
 							<div class="youtube-video">
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/video1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
+						</div>
+						<div class="carousel-item">
 							<!-- YouTube video 2 -->
 							<div class="youtube-video">
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
+						</div>
+						<div class="carousel-item">
 							<!-- YouTube video 3 -->
 							<div class="youtube-video">
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/video3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-item">
-						<h3 class="portfolio-title">Website</h3>
-						<p class="portfolio-description">Description of your website goes here.</p>
-						<a href="https://lordsofland.net/" target="_blank" class="portfolio-link">Visit Website</a>
-					</div>
-					<div class="portfolio-item">
-						<h3 class="portfolio-title">Children's YouTube Channel</h3>
-						<p class="portfolio-description">Description of your children's YouTube channel goes here.</p>
-						<div class="youtube-carousel">
-							<!-- YouTube video 1 -->
-							<div class="youtube-video">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/video1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-							<!-- YouTube video 2 -->
-							<div class="youtube-video">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-							<!-- YouTube video 3 -->
-							<div class="youtube-video">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/video3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</div>
-					</div>
-					<div class="portfolio-item">
-						<h3 class="portfolio-title">Children's Website</h3>
-						<p class="portfolio-description">Description of your children's website goes here.</p>
-						<a href="http://hartyboysgaming.com/" target="_blank" class="portfolio-link">Visit Website</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
+					<!-- Controls -->
+<a class="carousel-control-prev" href="#portfolio-carousel" role="button" data-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#portfolio-carousel" role="button" data-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+</a>
+
 
 
 	<section id="contact" class="section-padding">
@@ -243,5 +236,8 @@
       }, 1000);
     });
   </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
