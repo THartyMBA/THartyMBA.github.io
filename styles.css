@@ -121,6 +121,48 @@ border-radius: 5px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Collaboration and Opportunities section styles */
+.collaboration-section {
+padding: 4rem 1rem;
+background-color: #fff;
+}
+
+.collaboration-section h2 {
+margin-bottom: 2rem;
+color: #333;
+}
+
+.collaboration-section .collaboration-item:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: #ff9900;
+transform: translate(-50%, -50%);
+}
+
+.collaboration-section .collaboration-item h3 {
+margin-top: 0;
+color: #ff6600;
+}
+
+.collaboration-section .collaboration-item h4 {
+margin-top: 0;
+color: #333;
+font-weight: 600;
+}
+
+.collaboration-section .collaboration-item p {
+margin-bottom: 0.5rem;
+}
+
+.collaboration-section .collaboration-item:last-of-type {
+margin-bottom: 0;
+}
+
 /* Contact section styles */
 .contact-section {
 padding: 4rem 1rem;
