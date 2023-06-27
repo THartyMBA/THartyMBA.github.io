@@ -264,10 +264,32 @@ color: #333;
 }
 
 /* Footer styles */
+footer {
+  background-color: #333;
+  padding: 2rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+}
+
 .footer-links a {
-transition: color 0.3s ease;
+  color: #fff;
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 .footer-links a:hover {
-color: #ff9900;
+  color: #ff9900;
 }
+
+.footer-links i {
+  margin-right: 0.5rem;
+}
+
+.footer-links a:last-child {
+  margin-right: 0;
+}
+
