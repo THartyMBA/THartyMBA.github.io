@@ -188,6 +188,12 @@ a:hover {
 }
 
 /* Footer styles */
+footer {
+  background-color: #333 !important;
+  padding: 2rem 0;
+  color: #fff;
+  text-align: center;
+}
 
 .footer-links {
   margin-bottom: 1rem;
@@ -209,14 +215,4 @@ a:hover {
 
 .footer-links a:last-child {
   margin-right: 0;
-}
-.footer-links a:last-child {
-  margin-right: 0;
-}
-
-footer {
-  background-color: #333;
-  padding: 2rem 0;
-  color: #fff;
-  text-align: center;
 }
