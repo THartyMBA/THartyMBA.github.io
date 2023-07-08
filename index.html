@@ -384,6 +384,11 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
         event.preventDefault();
       }
     });
+
+    // Add event listener to dismiss the opt-in message after form submission
+    optinForm.addEventListener('submit', function() {
+      sessionStorage.setItem('optinDismissed', 'true');
+    });
   }
 </script>
 
