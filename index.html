@@ -340,5 +340,41 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/formspree@1.0.0"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+	<!-- Opt-In Modal -->
+<div class="modal fade" id="optinModal" tabindex="-1" role="dialog" aria-labelledby="optinModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="optinModalLabel">Stay Updated and Connect with Me!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
+        <form action="https://formspree.io/f/xjvqbbvn" method="POST">
+          <input type="hidden" name="_subject" value="New Opt-In Submission">
+          <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Opt-In Message Trigger -->
+<script>
+  $(document).ready(function() {
+    $('#optinModal').modal('show');
+  });
+</script>
+
 </body>
 </html>
