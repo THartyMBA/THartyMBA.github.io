@@ -341,7 +341,6 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/formspree@1.0.0"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <!-- JavaScript -->
 <script>
   // Check if the opt-in message has been dismissed
@@ -356,15 +355,15 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
     optinContent.innerHTML = `
       <h2>Stay Updated and Connect with Me!</h2>
       <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
-      <form id="optin-form" action="https://formspree.io/f/xjvqbbvn" method="POST">
+      <form id="optin-form" action="https://formspree.io/f/{your-formspree-email}" method="POST">
         <input type="hidden" name="_subject" value="New Opt-In Submission">
         <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
         <div class="form-group">
           <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <div id="optin-close">&times;</div>
       </form>
-      <div id="optin-close">&times;</div>
     `;
 
     optinOverlay.appendChild(optinContent);
