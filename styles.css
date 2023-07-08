@@ -218,6 +218,7 @@ footer {
 }
 
 
+/* Optin style */
 #optin-overlay {
   position: fixed;
   top: 50%;
@@ -231,7 +232,6 @@ footer {
   color: #fff;
 }
 
-/* optin style */
 #optin-content {
   position: relative;
 }
@@ -269,17 +269,3 @@ footer {
   color: #fff;
   cursor: pointer;
 }
-
-#optin-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 20px;
-  color: #fff;
-  cursor: pointer;
-}
-
-#optin-form .btn {
-  margin-top: 10px;
-}
-
