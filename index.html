@@ -342,39 +342,51 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
 <script src="https://cdn.jsdelivr.net/npm/formspree@1.0.0"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-	<!-- Opt-In Modal -->
-<div class="modal fade" id="optinModal" tabindex="-1" role="dialog" aria-labelledby="optinModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="optinModalLabel">Stay Updated and Connect with Me!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
-        <form action="https://formspree.io/f/xjvqbbvn" method="POST">
-          <input type="hidden" name="_subject" value="New Opt-In Submission">
-          <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Opt-In Message Trigger -->
+<!-- JavaScript -->
 <script>
-  $(document).ready(function() {
-    $('#optinModal').modal('show');
-  });
+  // Check if the opt-in message has been dismissed
+  var optinDismissed = sessionStorage.getItem('optinDismissed');
+  if (!optinDismissed) {
+    // Show the opt-in overlay
+    var optinOverlay = document.createElement('div');
+    optinOverlay.id = 'optin-overlay';
+
+    var optinContent = document.createElement('div');
+    optinContent.id = 'optin-content';
+    optinContent.innerHTML = `
+      <h2>Stay Updated and Connect with Me!</h2>
+      <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
+      <form id="optin-form" action="https://formspree.io/f/xjvqbbvn" method="POST">
+        <input type="hidden" name="_subject" value="New Opt-In Submission">
+        <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div id="optin-close">&times;</div>
+    `;
+
+    optinOverlay.appendChild(optinContent);
+    document.body.appendChild(optinOverlay);
+
+    // Add event listener to close the opt-in message
+    var optinClose = document.getElementById('optin-close');
+    optinClose.addEventListener('click', function() {
+      optinOverlay.style.display = 'none';
+      sessionStorage.setItem('optinDismissed', 'true');
+    });
+
+    // Prevent form submission on enter key press
+    var optinForm = document.getElementById('optin-form');
+    optinForm.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    });
+  }
 </script>
+
 
 </body>
 </html>
