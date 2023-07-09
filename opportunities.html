@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tom Harty - Personal Website</title>
+	<meta name="description" content="Tom Harty's Personal Website">
+	<meta name="keywords" content="Tom Harty, Personal, Website">
+	<meta name="author" content="Tom Harty">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Favicon -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Scripts -->
+	<script src="script.js"></script>
+
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8940733557549458"
+     crossorigin="anonymous"></script>
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYXMTXR0ZN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NYXMTXR0ZN');
+</script>
+
+	<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '856123186020765');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+	<!-- Chatbot Script -->
+	<script type="text/javascript" data-cfasync="false" src="https://humanchat.net/build/js/humanbot_latest.js?v=1.4.8" crossorigin="anonymous"></script>
+	<script>
+		var aiBot = new AiBot({embedId: 'FXXQf8gm3YMY', remoteBaseUrl: 'https://humanchat.net/', version: '1.4.8'});
+	</script>
+
+	<!-- Bootstrap carousel link -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- Header -->
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<div class="d-flex align-items-center">
+					<img src="1538960833002.jpeg" alt="Tom Harty" class="profile-picture">
+					<span class="ml-2">Tom Harty</span>
+				</div>
+			</a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="resume.html">Resume</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="projects.html">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="opportunities.html">Opportunities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="privacy.html">Privacy</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+
+
+	<!-- Footer -->
+<footer class="footer" style="background-color: #333;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer-links">
+          <a href="mailto:tom.hartymba@gmail.com">tom.hartymba@gmail.com</a>
+          <a href="https://www.linkedin.com/in/thomas-harty-ms-54809a11b/" target="_blank">LinkedIn Profile</a>
+          <a href="https://www.lordsofland.net" target="_blank">Lord of Land</a>
+          <a href="https://www.facebook.com/profile.php?id=100092332181854" target="_blank">Lord of Land Facebook Page</a>
+          <a href="#">Instagram</a>
+          <a href="https://www.hartyboysgaming.com" target="_blank">Harty Boys Gaming</a>
+          <a href="https://www.facebook.com/profile.php?id=100092415555183" target="_blank">Harty Boys Gaming Facebook Page</a>
+          <a href="#">Instagram</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <p style="color: #fff;">&copy; 2023 - <span id="current-year"></span> Tom Harty | All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Update current year dynamically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Smooth scrolling to anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          // Highlight current page on navigation bar
+          $('nav a').removeClass('active');
+          $(this).addClass('active');
+        }
+      });
+
+      // Dynamic image gallery
+      $('.gallery-item').click(function() {
+        var imgSrc = $(this).find('img').attr('src');
+        var imgAlt = $(this).find('img').attr('alt');
+        $('.modal-body img').attr({
+          'src': imgSrc,
+          'alt': imgAlt
+        });
+        $('.modal').modal('show');
+      });
+
+      // Countdown timer
+      var eventDate = new Date('2022-12-31 23:59:59').getTime();
+      var countdown = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = eventDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+        if (distance < 0) {
+          clearInterval(countdown);
+          document.getElementById('countdown').innerHTML = 'EXPIRED';
+        }
+      }, 1000);
+    });
+  </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/formspree@1.0.0"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+	
+	<!-- JavaScript -->
+<script>
+  // Check if the opt-in message has been dismissed
+  var optinDismissed = sessionStorage.getItem('optinDismissed');
+  if (!optinDismissed) {
+    // Show the opt-in overlay
+    var optinOverlay = document.createElement('div');
+    optinOverlay.id = 'optin-overlay';
+
+    var optinContent = document.createElement('div');
+    optinContent.id = 'optin-content';
+    optinContent.innerHTML = `
+      <h2>Stay Updated and Connect with Me!</h2>
+      <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
+      <form id="optin-form" action="https://formspree.io/f/xjvqbbvn" method="POST">
+        <input type="hidden" name="_subject" value="New Opt-In Submission">
+        <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    `;
+
+    optinOverlay.appendChild(optinContent);
+    document.body.appendChild(optinOverlay);
+
+    // Add event listener to close the opt-in message by clicking outside the message
+    optinOverlay.addEventListener('click', function(event) {
+      if (event.target === optinOverlay) {
+        optinOverlay.style.display = 'none';
+        sessionStorage.setItem('optinDismissed', 'true');
+      }
+    });
+
+    // Prevent form submission on enter key press
+    var optinForm = document.getElementById('optin-form');
+    optinForm.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    });
+
+    // Add event listener to dismiss the opt-in message after form submission
+    optinForm.addEventListener('submit', function() {
+      sessionStorage.setItem('optinDismissed', 'true');
+    });
+  }
+</script>
+
+
+
+
+</body>
+</html>
