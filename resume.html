@@ -99,4 +99,123 @@ src="https://www.facebook.com/tr?id=856123186020765&ev=PageView&noscript=1"
   </div>
 </footer>
 
+	<script>
+  // Update current year dynamically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+
+
+
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Smooth scrolling to anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          // Highlight current page on navigation bar
+          $('nav a').removeClass('active');
+          $(this).addClass('active');
+        }
+      });
+
+      // Dynamic image gallery
+      $('.gallery-item').click(function() {
+        var imgSrc = $(this).find('img').attr('src');
+        var imgAlt = $(this).find('img').attr('alt');
+        $('.modal-body img').attr({
+          'src': imgSrc,
+          'alt': imgAlt
+        });
+        $('.modal').modal('show');
+      });
+
+      // Countdown timer
+      var eventDate = new Date('2022-12-31 23:59:59').getTime();
+      var countdown = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = eventDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById('countdown').innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+        if (distance < 0) {
+          clearInterval(countdown);
+          document.getElementById('countdown').innerHTML = 'EXPIRED';
+        }
+      }, 1000);
+    });
+  </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/formspree@1.0.0"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+	
+	<!-- JavaScript -->
+<script>
+  // Check if the opt-in message has been dismissed
+  var optinDismissed = sessionStorage.getItem('optinDismissed');
+  if (!optinDismissed) {
+    // Show the opt-in overlay
+    var optinOverlay = document.createElement('div');
+    optinOverlay.id = 'optin-overlay';
+
+    var optinContent = document.createElement('div');
+    optinContent.id = 'optin-content';
+    optinContent.innerHTML = `
+      <h2>Stay Updated and Connect with Me!</h2>
+      <p>Sign up to receive updates, collaborate, or connect with me. Leave your email below:</p>
+      <form id="optin-form" action="https://formspree.io/f/xjvqbbvn" method="POST">
+        <input type="hidden" name="_subject" value="New Opt-In Submission">
+        <input type="hidden" name="_next" value="https://thartymba.github.io/index.html">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    `;
+
+    optinOverlay.appendChild(optinContent);
+    document.body.appendChild(optinOverlay);
+
+    // Add event listener to close the opt-in message by clicking outside the message
+    optinOverlay.addEventListener('click', function(event) {
+      if (event.target === optinOverlay) {
+        optinOverlay.style.display = 'none';
+        sessionStorage.setItem('optinDismissed', 'true');
+      }
+    });
+
+    // Prevent form submission on enter key press
+    var optinForm = document.getElementById('optin-form');
+    optinForm.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+      }
+    });
+
+    // Add event listener to dismiss the opt-in message after form submission
+    optinForm.addEventListener('submit', function() {
+      sessionStorage.setItem('optinDismissed', 'true');
+    });
+  }
+</script>
+
+
+
+
+</body>
+</html>
+
 	
